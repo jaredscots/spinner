@@ -1,0 +1,122 @@
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-wheel {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes switching {
+  14.2857% {
+    transform: scale(1);
+  }
+
+  28.5714% {
+    transform: scale(0.7);
+  }
+
+  71.4286% {
+    transform: scale(0.7);
+  }
+
+  85.7143% {
+    transform: scale(1);
+  }
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.wheel {
+  height: 100%;
+  position: relative;
+  user-select: none;
+}
+
+.content {
+  height: 100%;
+  position: 'relative';
+}
+
+.stepWaiting .content {
+  animation: animate-wheel 30s linear infinite;
+}
+
+.stepSpinning .content {
+  transition: all 15s cubic-bezier(0, 0.74, 0.24, 1);
+}
+
+.stepSwitching {
+  animation: switching 7s ease forwards;
+}
+
+.svg {
+  filter: drop-shadow(2px 4px 50px rgba(0, 0, 0, 0.3));
+  height: 100%;
+  overflow: visible;
+}
+
+.pointer {
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.6));
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(-25px, -50%);
+}
+
+.pointer::before {
+  border-color: transparent #333 transparent transparent;
+  border-style: solid;
+  border-width: 22px 54px 22px 0;
+  content: '';
+  position: absolute;
+  transform: translate(-2px, -50%);
+}
+
+.pointer::after {
+  border-color: transparent #007bff transparent transparent;
+  border-style: solid;
+  border-width: 20px 50px 20px 0;
+  content: '';
+  position: absolute;
+  transform: translate(0, -50%);
+}
+
+.debug {
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.stepEnd {
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.play {
+  fill: #51d951;
+  height: 100%;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.08);
+  transition: all 0.2s ease, opacity 0.5s ease;
+}
+
+.play path {
+  filter: drop-shadow(2px 4px 6px #000);
+}
+
+.clickable:hover .play {
+  fill: #22e922;
+  transform: translate(-50%, -50%) scale(0.09);
+}
+
+.wheel:not(.clickable) .play {
+  opacity: 0;
+}

@@ -1,0 +1,16 @@
+.background {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.img {
+  filter: blur(10px);
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+  transform: scale(1.1);
+  width: 100%;
+}

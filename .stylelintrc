@@ -1,0 +1,17 @@
+{
+  "extends": "stylelint-config-standard",
+  "plugins": [
+    "stylelint-order"
+  ],
+  "rules": {
+    "order/properties-alphabetical-order": true,
+    "property-no-unknown": [true, {
+      "ignoreProperties": ["‑webkit‑text‑size‑adjust"]
+    }],
+    "selector-class-pattern": null,
+    "selector-pseudo-class-no-unknown": [true, {
+      "ignorePseudoClasses": ["global"]
+    }],
+    "string-quotes": "single"
+  }
+}

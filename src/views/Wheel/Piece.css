@@ -1,0 +1,37 @@
+@keyframes switching {
+  28.5714% {
+    filter: none;
+  }
+
+  42.8571% {
+    filter: drop-shadow(2px 4px 30px rgba(0, 0, 0, 0.3));
+  }
+
+  57.1429% {
+    filter: drop-shadow(2px 4px 30px rgba(0, 0, 0, 0.3));
+  }
+
+  71.4286% {
+    filter: none;
+  }
+}
+
+.pieceContent {
+  transform-origin: 50% 50%;
+}
+
+.stepSwitching .pieceContent {
+  transition: all 1s 1s ease;
+}
+
+.pieceContent2 {
+  transition: all 1s 1s ease;
+}
+
+.pieceContent3 {
+  transform-origin: 50% 50%;
+}
+
+.stepSwitching {
+  animation: switching 7s ease forwards;
+}

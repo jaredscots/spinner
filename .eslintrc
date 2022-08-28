@@ -1,0 +1,26 @@
+{
+  "extends": "eslint-config-airbnb",
+  "env": {
+    "browser": true
+  },
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
+  "ignorePatterns": ["dist"],
+  "rules": {
+    "complexity": ["error", 13],
+    "import/prefer-default-export": "off",
+    "max-len": ["error", 250],
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+    "prefer-arrow-callback": "off",
+    "react/jsx-filename-extension": "off",
+    "react/jsx-no-bind": "off",
+    "react/jsx-no-constructed-context-values": "off",
+    "react/jsx-no-useless-fragment": ["error", { "allowExpressions": true }],
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-uses-react": "off",
+    "react/no-unescaped-entities": "off",
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off"
+  }
+}
